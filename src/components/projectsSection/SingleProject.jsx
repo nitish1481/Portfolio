@@ -23,9 +23,9 @@ const SingleProject = ({ name, year, align, image, description, technologies }) 
             <pre className="text-gray-700 whitespace-pre-wrap break-words">
               <code>
                 {`const project = {
-  name: "${name}",
-  technologies: [${technologies}],
-  Description: "${description}"
+name: "${name}",
+technologies: [${technologies}],
+Description: "${description}"
 };`}
               </code>
             </pre>
