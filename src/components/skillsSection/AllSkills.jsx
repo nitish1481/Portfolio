@@ -48,11 +48,11 @@ const skills = [
     icon: FaNodeJs
   },
   {
-    skill: "TailwindCSS",
+    skill: "Tailwind CSS",
     icon: RiTailwindCssFill,
   },
   {
-    skill:"MongoDB",
+    skill:"Mongo DB",
     icon: SiMongodb
   },
   {
@@ -117,7 +117,7 @@ const AllSkills = () => {
       <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 md:hidden px-4 sm:px-6 my-12">
         {skills.map((skill, id) => (
           <div 
-            className="flex flex-col items-center justify-center transition-all duration-500 rounded-lg group relative hover:scale-[1.05] cursor-pointer"
+            className="flex flex-col items-center justify-center break-words  overflow-hidden transition-all duration-500 rounded-lg group relative hover:scale-[1.05] cursor-pointer"
             key={id}
           >
             <div className="h-full w-full rounded-lg border border-[#2a2a2a] bg-[#1a1a1a] shadow-none shadow-gray-50 group-hover:border-orange-500 transition-all duration-500">
@@ -125,7 +125,7 @@ const AllSkills = () => {
                 <div className="h-8 sm:h-10">
                   {<skill.icon className="w-8 h-8 text-orange-500" />}
                 </div>
-                <p className="text-white text-sm sm:text-lg">
+                <p className="text-white text-sm sm:text-lg ">
                   {skill.skill}
                 </p>
               </div>
