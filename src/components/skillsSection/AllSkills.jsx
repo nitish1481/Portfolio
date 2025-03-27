@@ -103,7 +103,7 @@ const AllSkills = () => {
                   <div className="h-8 sm:h-10">
                     {<skill.icon className="w-8 h-8 text-orange-500" />}
                   </div>
-                  <p className="text-white text-sm sm:text-lg">
+                  <p className="text-white text-sm sm:text-lg break-all">
                     {skill.skill}
                   </p>
                 </div>
