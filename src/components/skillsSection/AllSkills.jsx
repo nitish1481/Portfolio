@@ -24,7 +24,7 @@ const skills = [
     icon: FaCss3Alt,
   },
   {
-    skill: "JavaScript",
+    skill: "Java Script",
     icon: IoLogoJavascript,
   },
   {
