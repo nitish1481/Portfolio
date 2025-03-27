@@ -2,18 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0 minimum-scale=1"
     />
 
+    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <style>
+      #fab-root{
+        display: flex;
+        place-content: center;
+      }
+      #webchat {
+        position: fixed;
+        bottom: 20px; /* Adjust for vertical positioning */
+        right: 20px; /* Adjust for horizontal positioning */
+        z-index: 9999; /* Ensures it stays on top */
+        width: 350px; /* Default width for desktop */
+        max-width: 100%;
+      }
+      #webchat .bpWebchat {
+        position: fixed;
+        z-index: 9999;
+        width: 550px;
+        height: 100vh;
+        bottom: 10px;
+        right: 10px;
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      #webchat .bpFab {
+        display: block !important;
+        height: 9rem;
+        width: 6rem;
+      }
+      .bpHeightFull{
+        padding: 5px;
+      }
+      @media screen and (max-width: 600px) {
+        .bpHeightFull{
+          padding:5px !important;
+        }
+      }
+    </style>
     <title>NK Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2025/03/25/16/20250325160708-8WKLACZ1.js"></script>
+
+    <!-- In your <head> tag -->
+
+    <!-- Put this on your page BEFORE the script below -->
+    <div id="webchat" style="width: 500px; height: 600px"></div>
+
+    <!-- In your <body> tag -->
+    <script>
+      window.botpress.on("webchat:ready", () => {
+        window.botpress.open();
+      });
+      window.botpress.init({
+        botId: "d19c1197-ac2b-48c5-b83b-d83f8017a48d",
+        configuration: {
+          website: {},
+          email: {},
+          phone: {},
+          termsOfService: {},
+          privacyPolicy: {},
+          color: "#3B82F6",
+          variant: "solid",
+          themeMode: "light",
+          fontFamily: "inter",
+          radius: 1,
+          additionalStylesheetUrl:
+            "https://files.bpcontent.cloud/2025/03/25/19/20250325191302-VEOHCL0Y.css",
+          allowFileUpload: true,
+        },
+        clientId: "e7bb5ea7-6f32-4a57-ad6b-cb545bfbd432",
+        selector: "#webchat",
+      });
+    </script>
   </body>
 </html>
