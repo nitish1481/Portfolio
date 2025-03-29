@@ -67,6 +67,7 @@ const ContactForm = () => {
           className=" rounded-lg bg-lightBrown p-2"
           value={message}
           onChange={handleMessage}
+          style={{ resize: "none" , overflow: "hidden"}}
         />
         <button
           type="submit"
